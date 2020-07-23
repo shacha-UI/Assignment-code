@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+<body onload="reportWindowSize()">
+    <h2 class="text-center">Popup Form</h2>
+    <button  onclick="openForm()" class="btn-submit btn-popup">Click here</button>
+    <!-- Popup form -->
+    <div id="popup-dialog" class="modal">
+      <div class="main-content">
+          <div class="modal-dialog animate">
+            <div class="modal-content">
+            <span onclick="closeForm()" class="close" title="Close Modal">&times;</span>
+              <div class="main-form">
+                <h2><strong>Get $10 Off when you sign up for</strong><br/>savings, news, updates and more</h2>
+                <form  method="post"  action="javascript:void(0)" name="myForm" onsubmit="return validateForm()">
+                <input type="text" placeholder="your name" name="uname" required>
+                <input type="email" placeholder="email address" name="mail" required>
+                  
+                <label class="checkbox-newsletter">
+                  <input type="checkbox" name="newsletter"> Check this box to receive monthly newsletter.
+                </label>
+                <button type="submit" class="btn-submit">Sign Up</button>
+    
+                <button class="btn-link">Privacy Policy</button>
+              </form>
+              </div>
+              <div class="main-image">
+                <img src="./back-img.png" alt="sale background" class="img-sale">
+              </div>
+            </div>
+            </div>
+      </div>
+    </div>
+    
+  <script src="./js/jquery.js"></script>
+  <script src="./js/custom.js"></script>
+</body>
+
+</html>
